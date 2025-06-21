@@ -1,3 +1,5 @@
+// exercicios.js
+
 // 1. Calcule o MDC (máximo divisor comum) entre dois números
 function mdc(a, b) {
     while (b !== 0) {
@@ -7,13 +9,11 @@ function mdc(a, b) {
     }
     return a;
 }
-console.log("MDC de 24 e 18:", mdc(24, 18));
 
 // 2. Índice do maior e menor valor em um array
 function indicesMaiorMenor(array) {
     let maior = array[0], menor = array[0];
     let indMaior = 0, indMenor = 0;
-
     for (let i = 1; i < array.length; i++) {
         if (array[i] > maior) {
             maior = array[i];
@@ -26,8 +26,6 @@ function indicesMaiorMenor(array) {
     }
     return { indiceMaior: indMaior, indiceMenor: indMenor };
 }
-let arr = [8, 13, 2, 44, 3, 21];
-console.log("Índices: ", indicesMaiorMenor(arr));
 
 // 3. Soma de múltiplos de 5 ou 7 abaixo de 1000
 function somaMultiplos5ou7(limite) {
@@ -39,4 +37,6 @@ function somaMultiplos5ou7(limite) {
     }
     return soma;
 }
-console.log("Soma dos múltiplos de 5 ou 7 abaixo de 1000:", somaMultiplos5ou7(1000));
+
+// Exportar as funções para os testes:
+module.exports = { mdc, indicesMaiorMenor, somaMultiplos5ou7 };
