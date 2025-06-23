@@ -1,5 +1,4 @@
-const { mdc, indicesMaiorMenor, somaMultiplos5ou7 } = require('./exercicios');
-
+const { mdc, indicesMaiorMenor, somaMultiplos5ou7 } = require('./functions/functions');
 describe('mdc', () => {
     test('mdc de 24 e 18 deve ser 6', () => {
         expect(mdc(24, 18)).toBe(6);
@@ -11,7 +10,6 @@ describe('mdc', () => {
         expect(mdc(20, 100)).toBe(20);
     });
 });
-
 describe('indicesMaiorMenor', () => {
     test('array [8, 13, 2, 44, 3, 21]', () => {
         const resultado = indicesMaiorMenor([8, 13, 2, 44, 3, 21]);
@@ -26,7 +24,6 @@ describe('indicesMaiorMenor', () => {
         expect(resultado).toEqual({ indiceMaior: 0, indiceMenor: 0 });
     });
 });
-
 describe('somaMultiplos5ou7', () => {
     test('todos os múltiplos de 5 ou 7 menores que 10', () => {
         expect(somaMultiplos5ou7(10)).toBe(12); // 5 + 7 = 12
